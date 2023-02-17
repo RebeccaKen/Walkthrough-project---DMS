@@ -1,7 +1,8 @@
 from flask import render_template, request, redirect, url_for
 
 from flask import render_template
-from taskmanager import app, db
+from taskmanager import app
+from .database import db
 from taskmanager.models import Category, Task
 
 @app.route("/")
