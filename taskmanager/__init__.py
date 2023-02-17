@@ -6,7 +6,7 @@ if os.path.exists("env.py"):
 from .database import db
 
 def create_app():
-    app = Flask('taskmanager')
+    app = Flask(__name__)
     app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 
     if os.environ.get("DEVELOPMENT") == "True":
